@@ -18,3 +18,4 @@ Return an array answer, where `answer[j]` is the answer to the `jth` query.
     queries[0] is the green circle, queries[1] is the red circle, and queries[2] is the blue circle.
 
 ## Example 2
+![image](https://user-images.githubusercontent.com/53091475/154852413-c3d83f76-7235-41ba-8d56-1943a852d940.png)

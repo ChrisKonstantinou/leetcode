@@ -7,3 +7,7 @@ You are also given an array `queries` where `queries[j] = [xj, yj, rj]` describe
 For each query `queries[j]`, compute the number of points inside the `jth` circle. Points on the border of the circle are considered inside.
 
 Return an array answer, where `answer[j]` is the answer to the `jth` query.
+
+## Example 1
+![image](https://user-images.githubusercontent.com/53091475/154852332-74fcd2c6-597a-4b17-a1d8-34667b0a2877.png)
+

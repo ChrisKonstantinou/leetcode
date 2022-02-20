@@ -8,15 +8,15 @@ class Solution
 public:
     vector<int> runningSum(vector<int>& nums)
     {
-        vector<int> r_nums;
         int n = nums.size();
+        int sum = 0;
+
         for (int i = 0; i < n; i++)
-        {
-            int sum = nums[i];
-            for (int j = 0; j < i; j++) sum += nums[j];
-            r_nums.push_back(sum);
+        {   
+            sum += nums[i];
+            nums[i] = sum;
         }
-        return r_nums;
+        return nums;
     }
 };
 

@@ -1,4 +1,4 @@
-# 1828. Queries on Number of Points Inside a Circle
+# **1828. Queries on Number of Points Inside a Circle**
 
 You are given an array points where `points[i] = [xi, yi]` is the coordinates of the `ith` point on a `2D plane`. Multiple points can have the same coordinates.
 
@@ -8,7 +8,7 @@ For each query `queries[j]`, compute the number of points inside the `jth` circl
 
 Return an array answer, where `answer[j]` is the answer to the `jth` query.
 
-## Example 1
+## **Example 1:**
 
 ![image](https://user-images.githubusercontent.com/53091475/154852332-74fcd2c6-597a-4b17-a1d8-34667b0a2877.png)
 
@@ -17,7 +17,7 @@ Return an array answer, where `answer[j]` is the answer to the `jth` query.
     Explanation: The points and circles are shown above.
     queries[0] is the green circle, queries[1] is the red circle, and queries[2] is the blue circle.
 
-## Example 2
+## **Example 2:**
 
 ![image](https://user-images.githubusercontent.com/53091475/154852413-c3d83f76-7235-41ba-8d56-1943a852d940.png)
 
@@ -26,7 +26,7 @@ Return an array answer, where `answer[j]` is the answer to the `jth` query.
     Explanation: The points and circles are shown above.
     queries[0] is green, queries[1] is red, queries[2] is blue, and queries[3] is purple
 
-## Constraints
+## **Constraints:**
 
 - `1 <= points.length <= 500`
 - `points[i].length == 2`

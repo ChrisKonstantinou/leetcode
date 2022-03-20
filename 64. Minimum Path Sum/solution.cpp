@@ -1,39 +1,42 @@
 #include <iostream>
 #include <vector>
+#include <limits.h>
 
 using namespace std;
 
 class Solution 
-{
+{   
 public:
+
     int minPathSum(vector<vector<int>>& grid)
     {
-        int rows = grid.size();
-        int columns = grid[0].size();
-        int goal = grid[rows - 1][columns - 1];
-        
-        for (int i = 0; i < rows - 1; i++)
+        int n = grid.size();
+        int m = grid[0].size();
+        //initialize 1st column
+        for(int j = 1; j < m; j++)
         {
-            for (int j = 0; j < columns - 1; j++)
+            grid[0][j] = grid[0][j - 1] + grid[0][j];
+        }
+        //initialize 1st row
+        for(int i = 1; i < n; i++)
+        {
+            grid[i][0] = grid[i - 1][0] + grid[i][0];
+        }
+        for(int i = 1; i < n; i++)
+        {
+            for(int j = 1; j < m; j++)
             {
-                
+                grid[i][j] += min(grid[i - 1][j], grid[i][j - 1]);
+                //find minimum of top and left block cost
             }
         }
-
-        //Valid moves
-        // grid[i][j] - > grid[i][j + 1]
-        // grid[i][j] - > grid[i + 1][j]
-
-
-
-        return goal;
-    }
+     return grid[n - 1][m - 1];
+   }
 };
-
 
 int main ()
 {
     Solution solution;
-    vector<vector<int>> path = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    vector<vector<int>> path = {{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
     cout << solution.minPathSum(path) << endl;
 }
